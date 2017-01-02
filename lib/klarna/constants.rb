@@ -1,0 +1,30 @@
+module Klarna
+  module Constants
+    CLOSED_INVOICE_STATUS = 8115
+    TEST_MODE_INVOICE_STATUS = 8112
+    INVOICE_NOT_EXIST_STATUS = 8101
+    TIMEOUT_FAULT_CODES = [9119, 9191]
+    TEST_PERSON_FLAG = 2
+    REAL_PERSON_FLAG = 0
+    AGGREGATED_INVOICE_FLAG = 16384
+    SINGLE_INVOICE_BY_EMAIL_FLAG = 8
+    GET_ADDRESSES_PNO_ENCODING_SE = 2
+    GET_ADDRESSES_TYPE_PNO = 5
+    GET_ADDRESSES_TYPE_TNO = 6
+    VAT_INCLUDED = 32
+    module TestPersonPnos
+      SE = ['4103219202', '4110288083', '2104187410']
+      NO = ['01121579533', '01121598422']
+      DK = ['0801363945', '0801373501']
+      FI = ['190122-829F', '190122-333F']
+    end
+
+    module TestPersonTnos
+      SE = ['46701111111']
+    end
+
+    module TestCompanyPnos
+      SE = ['0020310132']
+    end
+  end
+end

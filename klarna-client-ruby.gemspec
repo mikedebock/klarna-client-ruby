@@ -12,14 +12,21 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{XMLRPC Client to Klarna's API.}
   gem.homepage      = ""
 
-  gem.add_development_dependency "rspec"
-  gem.add_development_dependency "pry"
+  gem.add_development_dependency "activesupport", "~> 4.0"
+  gem.add_development_dependency "byebug"
+  gem.add_development_dependency "dotenv"
+  gem.add_development_dependency "factory_girl"
   gem.add_development_dependency "fuubar"
-  gem.add_development_dependency "debugger"
-  gem.add_development_dependency 'factory_girl'
-  gem.add_development_dependency 'webmock'
-  gem.add_development_dependency 'vcr'
-  gem.add_development_dependency 'dotenv'
+  gem.add_development_dependency "pry"
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "vcr"
+  gem.add_development_dependency "webmock"
+
+  gem.add_runtime_dependency "faraday_middleware"
+  gem.add_runtime_dependency "gene_pool"
+  gem.add_runtime_dependency "klarna_correlation_id"
+  gem.add_runtime_dependency "retryable", '>= 2.0.0'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

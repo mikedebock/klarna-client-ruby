@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<KLARNA_HOST>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>get_addresses</methodName><params><param><value><string>4.1</string></value></param><param><value><string>xmlrpc:inapp:4.1</string></value></param><param><value><string>46701111111</string></value></param><param><value><i4>2728</i4></value></param><param><value><string>RKSK7GxCCIbl0ylYNATPrMRytuuZqtJmmIXbu3/9Kz1iY6uNFUlp3nbyJcxm7ZZxZmfHbSC2Zw0NkfAG0fuGvg==</string></value></param><param><value><i4>2</i4></value></param><param><value><i4>6</i4></value></param><param><value><string></string></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '579'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - MochiWeb/1.1 WebMachine/1.10.5 (jokes are better explained)
+      Date:
+      - Fri, 20 Nov 2015 06:58:49 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '471'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iSVNPLTg4NTktMSI/Pjxt
+        ZXRob2RSZXNwb25zZT48cGFyYW1zPjxwYXJhbT48dmFsdWU+PGFycmF5Pjxk
+        YXRhPjx2YWx1ZT48YXJyYXk+PGRhdGE+PHZhbHVlPjxzdHJpbmc+NDEwMzIx
+        LTkyMDI8L3N0cmluZz48L3ZhbHVlPjx2YWx1ZT48c3RyaW5nPlRlc3RwZXJz
+        b24tc2U8L3N0cmluZz48L3ZhbHVlPjx2YWx1ZT48c3RyaW5nPkFwcHJvdmVk
+        PC9zdHJpbmc+PC92YWx1ZT48dmFsdWU+PHN0cmluZz5TdOVyZ2F0YW4gMTwv
+        c3RyaW5nPjwvdmFsdWU+PHZhbHVlPjxzdHJpbmc+MTIzNDU8L3N0cmluZz48
+        L3ZhbHVlPjx2YWx1ZT48c3RyaW5nPkFua2Vib3JnPC9zdHJpbmc+PC92YWx1
+        ZT48dmFsdWU+PGludD4yMDk8L2ludD48L3ZhbHVlPjwvZGF0YT48L2FycmF5
+        PjwvdmFsdWU+PC9kYXRhPjwvYXJyYXk+PC92YWx1ZT48L3BhcmFtPjwvcGFy
+        YW1zPjwvbWV0aG9kUmVzcG9uc2U+
+    http_version: 
+  recorded_at: Fri, 20 Nov 2015 06:59:20 GMT
+- request:
+    method: post
+    uri: http://<KLARNA_HOST>:<KLARNA_PORT>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>get_addresses</methodName><params><param><value><string>4.2</string></value></param><param><value><string>xmlrpc:inapp:4.2</string></value></param><param><value><string>46701111111</string></value></param><param><value><i4>10</i4></value></param><param><value><string>/JhYUQj7Y55yoV0dzp9zI1VZK+bHOqe7hKh3OSt/fZcl5YWiT2IdehHfGsRIprOarOKqV7B2q7snL2HvKA4j3g==</string></value></param><param><value><i4>2</i4></value></param><param><value><i4>6</i4></value></param><param><value><string></string></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '577'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.11.2
+      Date:
+      - Thu, 22 Dec 2016 11:23:30 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '471'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iSVNPLTg4NTktMSI/Pjxt
+        ZXRob2RSZXNwb25zZT48cGFyYW1zPjxwYXJhbT48dmFsdWU+PGFycmF5Pjxk
+        YXRhPjx2YWx1ZT48YXJyYXk+PGRhdGE+PHZhbHVlPjxzdHJpbmc+NDEwMzIx
+        LTkyMDI8L3N0cmluZz48L3ZhbHVlPjx2YWx1ZT48c3RyaW5nPlRlc3RwZXJz
+        b24tc2U8L3N0cmluZz48L3ZhbHVlPjx2YWx1ZT48c3RyaW5nPkFwcHJvdmVk
+        PC9zdHJpbmc+PC92YWx1ZT48dmFsdWU+PHN0cmluZz5TdOVyZ2F0YW4gMTwv
+        c3RyaW5nPjwvdmFsdWU+PHZhbHVlPjxzdHJpbmc+MTIzNDU8L3N0cmluZz48
+        L3ZhbHVlPjx2YWx1ZT48c3RyaW5nPkFua2Vib3JnPC9zdHJpbmc+PC92YWx1
+        ZT48dmFsdWU+PGludD4yMDk8L2ludD48L3ZhbHVlPjwvZGF0YT48L2FycmF5
+        PjwvdmFsdWU+PC9kYXRhPjwvYXJyYXk+PC92YWx1ZT48L3BhcmFtPjwvcGFy
+        YW1zPjwvbWV0aG9kUmVzcG9uc2U+
+    http_version: 
+  recorded_at: Thu, 22 Dec 2016 11:23:30 GMT
+recorded_with: VCR 3.0.3

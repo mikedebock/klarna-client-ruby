@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-describe Klarna::Methods::Activate do
+describe Klarna::Methods::CreditInvoice do
   describe '.xmlrpc_name' do
-    it 'is activate' do
-      expect(subject.xmlrpc_name).to eq('activate')
+    it 'is credit_invoice' do
+      expect(subject.xmlrpc_name).to eq('credit_invoice')
     end
   end
 
   describe '.xmlrpc_params' do
     context 'given the following input parameters' do
-      let(:params)       { {:rno => '123456'} }
+      let(:params)       { { :invno => '123456' } }
 
       let(:store_id)     { ENV['KLARNA_STORE_ID'] }
       let(:store_secret) { ENV['KLARNA_STORE_SECRET'] }
@@ -28,18 +28,17 @@ describe Klarna::Methods::Activate do
         expect(method_params[0]).to eq(store_id)
       end
 
-      it 'returns the digest in position 1' do
-        expect(method_params[1]).to be_a(String)
+      it 'returns the INVNO in position 1' do
+        expect(method_params[1]).to eq('123456')
       end
 
-      it 'returns the RNO in position 2' do
-        expect(method_params[2]).to eq('123456')
+      it 'returns empty CREDNO in position 2' do
+        expect(method_params[2]).to eq('')
       end
 
-      it 'returns the optional info in position 3' do
-        expect(method_params[3]).to eq({})
+      it 'returns the digest in position 3' do
+        expect(method_params[3]).to be_a(String)
       end
-
     end
   end
 end

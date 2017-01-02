@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<KLARNA_HOST>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>get_addresses</methodName><params><param><value><string>4.1</string></value></param><param><value><string>xmlrpc:inapp:4.1</string></value></param><param><value><string>4103219202</string></value></param><param><value><i4>2728</i4></value></param><param><value><string>ViYgXHLsIZjB2y1ie3VgtIIVtxUdlUKCorWUymwgazaRP/2KnnCu6jlEcSqlNLL6ptb5+FgI7o0IIHfIrgog2Q==</string></value></param><param><value><i4>2</i4></value></param><param><value><i4>5</i4></value></param><param><value><string></string></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '578'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - MochiWeb/1.1 WebMachine/1.10.5 (jokes are better explained)
+      Date:
+      - Fri, 20 Nov 2015 06:58:48 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '434'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iSVNPLTg4NTktMSI/Pjxt
+        ZXRob2RSZXNwb25zZT48cGFyYW1zPjxwYXJhbT48dmFsdWU+PGFycmF5Pjxk
+        YXRhPjx2YWx1ZT48YXJyYXk+PGRhdGE+PHZhbHVlPjxzdHJpbmc+VGVzdHBl
+        cnNvbi1zZTwvc3RyaW5nPjwvdmFsdWU+PHZhbHVlPjxzdHJpbmc+QXBwcm92
+        ZWQ8L3N0cmluZz48L3ZhbHVlPjx2YWx1ZT48c3RyaW5nPlN05XJnYXRhbiAx
+        PC9zdHJpbmc+PC92YWx1ZT48dmFsdWU+PHN0cmluZz4xMjM0NTwvc3RyaW5n
+        PjwvdmFsdWU+PHZhbHVlPjxzdHJpbmc+QW5rZWJvcmc8L3N0cmluZz48L3Zh
+        bHVlPjx2YWx1ZT48c3RyaW5nPjIwOTwvc3RyaW5nPjwvdmFsdWU+PC9kYXRh
+        PjwvYXJyYXk+PC92YWx1ZT48L2RhdGE+PC9hcnJheT48L3ZhbHVlPjwvcGFy
+        YW0+PC9wYXJhbXM+PC9tZXRob2RSZXNwb25zZT4=
+    http_version: 
+  recorded_at: Fri, 20 Nov 2015 06:59:19 GMT
+- request:
+    method: post
+    uri: http://<KLARNA_HOST>:<KLARNA_PORT>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>get_addresses</methodName><params><param><value><string>4.2</string></value></param><param><value><string>xmlrpc:inapp:4.2</string></value></param><param><value><string>4103219202</string></value></param><param><value><i4>10</i4></value></param><param><value><string>aUIIj9OHdrvFe1GClJ60zlnKvYkT8+Ie90GJNqApqgDmg1S9rmNmJYULMtkFrmMlCIcxF7EEoeVwS7QmAGRyQw==</string></value></param><param><value><i4>2</i4></value></param><param><value><i4>5</i4></value></param><param><value><string></string></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '576'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.11.2
+      Date:
+      - Thu, 22 Dec 2016 11:23:30 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '434'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iSVNPLTg4NTktMSI/Pjxt
+        ZXRob2RSZXNwb25zZT48cGFyYW1zPjxwYXJhbT48dmFsdWU+PGFycmF5Pjxk
+        YXRhPjx2YWx1ZT48YXJyYXk+PGRhdGE+PHZhbHVlPjxzdHJpbmc+VGVzdHBl
+        cnNvbi1zZTwvc3RyaW5nPjwvdmFsdWU+PHZhbHVlPjxzdHJpbmc+QXBwcm92
+        ZWQ8L3N0cmluZz48L3ZhbHVlPjx2YWx1ZT48c3RyaW5nPlN05XJnYXRhbiAx
+        PC9zdHJpbmc+PC92YWx1ZT48dmFsdWU+PHN0cmluZz4xMjM0NTwvc3RyaW5n
+        PjwvdmFsdWU+PHZhbHVlPjxzdHJpbmc+QW5rZWJvcmc8L3N0cmluZz48L3Zh
+        bHVlPjx2YWx1ZT48c3RyaW5nPjIwOTwvc3RyaW5nPjwvdmFsdWU+PC9kYXRh
+        PjwvYXJyYXk+PC92YWx1ZT48L2RhdGE+PC9hcnJheT48L3ZhbHVlPjwvcGFy
+        YW0+PC9wYXJhbXM+PC9tZXRob2RSZXNwb25zZT4=
+    http_version: 
+  recorded_at: Thu, 22 Dec 2016 11:23:30 GMT
+recorded_with: VCR 3.0.3

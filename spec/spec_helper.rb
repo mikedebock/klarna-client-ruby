@@ -6,8 +6,10 @@ FactoryGirl.find_definitions
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
-  # VCR metadata configuration
-  config.treat_symbols_as_metadata_keys_with_true_values = true
+  config.color = true
+  config.mock_with :rspec do |mocks|
+    mocks.verify_partial_doubles = true
+  end
 end
 
 require 'vcr'
@@ -16,8 +18,8 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   c.hook_into :webmock
 
-  c.filter_sensitive_data('<KlARNA_URL>')  { ENV['KLARNA_URL'] }
-  c.filter_sensitive_data('<KlARNA_PORT>') { ENV['KLARNA_PORT'] }
+  c.filter_sensitive_data('<KLARNA_HOST>')  { ENV['KLARNA_HOST'] }
+  c.filter_sensitive_data('<KLARNA_PORT>') { ENV['KLARNA_PORT'] }
 
   c.configure_rspec_metadata!
 end

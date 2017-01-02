@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://<KLARNA_HOST>:<KLARNA_PORT>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>get_payref_id</methodName><params><param><value><string>4.1</string></value></param><param><value><string>xmlrpc:inapp:4.1</string></value></param><param><value><i4>2728</i4></value></param><param><value><string>dBs+9UeWy42MmrU2ORfK1rOt3Mv++LloYVACjmGhfBkf0FgwU72RX2VxoN+RLeuXjcU6r0t3oO/C4VN7NfoIMQ==</string></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '394'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - MochiWeb/1.1 WebMachine/1.10.5 (jokes are better explained)
+      Date:
+      - Fri, 20 Nov 2015 06:59:01 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '148'
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="ISO-8859-1"?><methodResponse><params><param><value><string>M34QKNZL</string></value></param></params></methodResponse>
+    http_version: 
+  recorded_at: Fri, 20 Nov 2015 06:59:32 GMT
+- request:
+    method: post
+    uri: http://<KLARNA_HOST>:<KLARNA_PORT>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>create_prepaid_order</methodName><params><param><value><string>4.1</string></value></param><param><value><string>xmlrpc:inapp:4.1</string></value></param><param><value><i4>2728</i4></value></param><param><value><string>jMOWS/Z6gE5/fuRrVZmyq/1NcS+1F7PBxyswoF/n16WsuH9yAWmMquyA3uE2OSsL2E7TSPVnZdN1yW3ZEc7iMg==</string></value></param><param><value><i4>209</i4></value></param><param><value><i4>138</i4></value></param><param><value><i4>0</i4></value></param><param><value><array><data><value><struct><member><name>goods</name><value><struct><member><name>artno</name><value><string>article1</string></value></member><member><name>title</name><value><string>Article Foo</string></value></member><member><name>price</name><value><i4>199</i4></value></member><member><name>vat</name><value><i4>25</i4></value></member><member><name>discount</name><value><i4>0</i4></value></member><member><name>flags</name><value><i4>32</i4></value></member></struct></value></member><member><name>qty</name><value><i4>1</i4></value></member></struct></value></data></array></value></param><param><value><struct><member><name>external_payref_id</name><value><string>EXT_ID_1234567</string></value></member><member><name>payref_id</name><value><string>M34QKNZL</string></value></member><member><name>service_type</name><value><string>credit_card</string></value></member><member><name>bank_name</name><value><string>Valitor</string></value></member><member><name>payment_connector</name><value><string>payon</string></value></member></struct></value></param><param><value><struct><member><name>cellno</name><value><string>+46700029099</string></value></member><member><name>contact</name><value><struct/></value></member></struct></value></param><param><value><struct><member><name>order_id_1</name><value><string></string></value></member><member><name>order_id_2</name><value><string></string></value></member></struct></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '1984'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - MochiWeb/1.1 WebMachine/1.10.5 (jokes are better explained)
+      Date:
+      - Fri, 20 Nov 2015 06:59:02 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '199'
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="ISO-8859-1"?><methodResponse><params><param><value><array><data><value><string>6232547470009967</string></value></data></array></value></param></params></methodResponse>
+    http_version: 
+  recorded_at: Fri, 20 Nov 2015 06:59:33 GMT
+recorded_with: VCR 2.9.2

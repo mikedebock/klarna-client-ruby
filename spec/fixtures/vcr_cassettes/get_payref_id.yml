@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://<KLARNA_HOST>:<KLARNA_PORT>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>get_payref_id</methodName><params><param><value><string>4.1</string></value></param><param><value><string>xmlrpc:inapp:4.1</string></value></param><param><value><i4>2728</i4></value></param><param><value><string>dBs+9UeWy42MmrU2ORfK1rOt3Mv++LloYVACjmGhfBkf0FgwU72RX2VxoN+RLeuXjcU6r0t3oO/C4VN7NfoIMQ==</string></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '394'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - MochiWeb/1.1 WebMachine/1.10.5 (jokes are better explained)
+      Date:
+      - Fri, 20 Nov 2015 06:59:00 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '148'
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="ISO-8859-1"?><methodResponse><params><param><value><string>9G317CK1</string></value></param></params></methodResponse>
+    http_version: 
+  recorded_at: Fri, 20 Nov 2015 06:59:31 GMT
+recorded_with: VCR 2.9.2

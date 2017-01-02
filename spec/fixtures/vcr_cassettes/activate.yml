@@ -1,0 +1,167 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<KLARNA_HOST>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>reserve_amount</methodName><params><param><value><string>4.1</string></value></param><param><value><string>xmlrpc:inapp:4.1</string></value></param><param><value><string>4103219202</string></value></param><param><value><string></string></value></param><param><value><i4>299</i4></value></param><param><value><string></string></value></param><param><value><string></string></value></param><param><value><string></string></value></param><param><value><string></string></value></param><param><value><struct><member><name>email</name><value><string>always_approved@klarna.com</string></value></member><member><name>telno</name><value><string></string></value></member><member><name>cellno</name><value><string>0762560000</string></value></member><member><name>fname</name><value><string>Testperson-se</string></value></member><member><name>lname</name><value><string>Approved</string></value></member><member><name>company</name><value><string></string></value></member><member><name>careof</name><value><string></string></value></member><member><name>street</name><value><string>Stårgatan 1</string></value></member><member><name>house_number</name><value><string></string></value></member><member><name>house_extension</name><value><string></string></value></member><member><name>zip</name><value><string>12345</string></value></member><member><name>city</name><value><string>Ankeborg</string></value></member><member><name>country</name><value><i4>209</i4></value></member></struct></value></param><param><value><struct><member><name>email</name><value><string>always_approved@klarna.com</string></value></member><member><name>telno</name><value><string></string></value></member><member><name>cellno</name><value><string>0762560000</string></value></member><member><name>fname</name><value><string>Testperson-se</string></value></member><member><name>lname</name><value><string>Approved</string></value></member><member><name>company</name><value><string></string></value></member><member><name>careof</name><value><string></string></value></member><member><name>street</name><value><string>Stårgatan 1</string></value></member><member><name>house_number</name><value><string></string></value></member><member><name>house_extension</name><value><string></string></value></member><member><name>zip</name><value><string>12345</string></value></member><member><name>city</name><value><string>Ankeborg</string></value></member><member><name>country</name><value><i4>209</i4></value></member></struct></value></param><param><value><string></string></value></param><param><value><i4>2</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>209</i4></value></param><param><value><i4>138</i4></value></param><param><value><i4>2728</i4></value></param><param><value><string>hfvWvjrEYWRUTMYD59dmpxDhSMrJ88Qtw4kzG80mrk7zDvuynQBiPE1tFSNNa3mIWC686TAf79y3+qX+FSiXiQ==</string></value></param><param><value><i4>2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><array><data><value><struct><member><name>goods</name><value><struct><member><name>artno</name><value><string>article1</string></value></member><member><name>title</name><value><string>Article Foo</string></value></member><member><name>price</name><value><i4>199</i4></value></member><member><name>vat</name><value><i4>25</i4></value></member><member><name>discount</name><value><i4>0</i4></value></member><member><name>flags</name><value><i4>32</i4></value></member></struct></value></member><member><name>qty</name><value><i4>1</i4></value></member></struct></value><value><struct><member><name>goods</name><value><struct><member><name>artno</name><value><string>article2</string></value></member><member><name>title</name><value><string>Article Poo</string></value></member><member><name>price</name><value><i4>100</i4></value></member><member><name>vat</name><value><i4>25</i4></value></member><member><name>discount</name><value><i4>0</i4></value></member><member><name>flags</name><value><i4>32</i4></value></member></struct></value></member><member><name>qty</name><value><i4>1</i4></value></member></struct></value></data></array></value></param><param><value><string></string></value></param><param><value><struct><member><name>delay_adjust</name><value><i4>1</i4></value></member></struct></value></param><param><value><array><data/></array></value></param><param><value><array><data/></array></value></param><param><value><array><data/></array></value></param><param><value><struct/></value></param><param><value><array><data/></array></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '4629'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - MochiWeb/1.1 WebMachine/1.10.5 (jokes are better explained)
+      Date:
+      - Fri, 20 Nov 2015 06:58:50 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '220'
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="ISO-8859-1"?><methodResponse><params><param><value><array><data><value><string>2359889900</string></value><value><int>1</int></value></data></array></value></param></params></methodResponse>
+    http_version: 
+  recorded_at: Fri, 20 Nov 2015 06:59:21 GMT
+- request:
+    method: post
+    uri: https://<KLARNA_HOST>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>activate</methodName><params><param><value><string>4.1</string></value></param><param><value><string>xmlrpc:inapp:4.1</string></value></param><param><value><i4>2728</i4></value></param><param><value><string>oYG36ExVf8RC7j/UCvwB0ghwt8h+3o0q26JDsJuNq5L6qM4ClkpUp57HcMz+Ew6weEITRoR7AIMBJjI9Kg1soA==</string></value></param><param><value><string>2359889900</string></value></param><param><value><struct><member><name>flags</name><value><i4>2</i4></value></member></struct></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '553'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - MochiWeb/1.1 WebMachine/1.10.5 (jokes are better explained)
+      Date:
+      - Fri, 20 Nov 2015 06:58:53 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '234'
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="ISO-8859-1"?><methodResponse><params><param><value><array><data><value><string>ok</string></value><value><string>41511272881900675</string></value></data></array></value></param></params></methodResponse>
+    http_version: 
+  recorded_at: Fri, 20 Nov 2015 06:59:24 GMT
+- request:
+    method: post
+    uri: http://<KLARNA_HOST>:<KLARNA_PORT>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>reserve_amount</methodName><params><param><value><string>4.2</string></value></param><param><value><string>xmlrpc:inapp:4.2</string></value></param><param><value><string>4103219202</string></value></param><param><value><string></string></value></param><param><value><i4>299</i4></value></param><param><value><string></string></value></param><param><value><string></string></value></param><param><value><string></string></value></param><param><value><string></string></value></param><param><value><struct><member><name>email</name><value><string>always_approved@klarna.com</string></value></member><member><name>telno</name><value><string></string></value></member><member><name>cellno</name><value><string>0762560000</string></value></member><member><name>fname</name><value><string>Testperson-se</string></value></member><member><name>lname</name><value><string>Approved</string></value></member><member><name>company</name><value><string></string></value></member><member><name>careof</name><value><string></string></value></member><member><name>street</name><value><string>Stårgatan 1</string></value></member><member><name>house_number</name><value><string></string></value></member><member><name>house_extension</name><value><string></string></value></member><member><name>zip</name><value><string>12345</string></value></member><member><name>city</name><value><string>Ankeborg</string></value></member><member><name>country</name><value><i4>209</i4></value></member></struct></value></param><param><value><struct><member><name>email</name><value><string>always_approved@klarna.com</string></value></member><member><name>telno</name><value><string></string></value></member><member><name>cellno</name><value><string>0762560000</string></value></member><member><name>fname</name><value><string>Testperson-se</string></value></member><member><name>lname</name><value><string>Approved</string></value></member><member><name>company</name><value><string></string></value></member><member><name>careof</name><value><string></string></value></member><member><name>street</name><value><string>Stårgatan 1</string></value></member><member><name>house_number</name><value><string></string></value></member><member><name>house_extension</name><value><string></string></value></member><member><name>zip</name><value><string>12345</string></value></member><member><name>city</name><value><string>Ankeborg</string></value></member><member><name>country</name><value><i4>209</i4></value></member></struct></value></param><param><value><string></string></value></param><param><value><i4>2</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>209</i4></value></param><param><value><i4>138</i4></value></param><param><value><i4>10</i4></value></param><param><value><string>iBnR3aFeD/jxve5ot+rp8rK0IqU6mxgyJk4brw97SHsypSn7FppUYFlG1Hhy/6tVCeOnfkBTjf2PlQiTVbLyRA==</string></value></param><param><value><i4>2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><array><data><value><struct><member><name>goods</name><value><struct><member><name>artno</name><value><string>article1</string></value></member><member><name>title</name><value><string>Article Foo</string></value></member><member><name>price</name><value><i4>199</i4></value></member><member><name>vat</name><value><i4>25</i4></value></member><member><name>discount</name><value><i4>0</i4></value></member><member><name>flags</name><value><i4>32</i4></value></member></struct></value></member><member><name>qty</name><value><i4>1</i4></value></member></struct></value><value><struct><member><name>goods</name><value><struct><member><name>artno</name><value><string>article2</string></value></member><member><name>title</name><value><string>Article Poo</string></value></member><member><name>price</name><value><i4>100</i4></value></member><member><name>vat</name><value><i4>25</i4></value></member><member><name>discount</name><value><i4>0</i4></value></member><member><name>flags</name><value><i4>32</i4></value></member></struct></value></member><member><name>qty</name><value><i4>1</i4></value></member></struct></value></data></array></value></param><param><value><string></string></value></param><param><value><struct><member><name>delay_adjust</name><value><i4>1</i4></value></member></struct></value></param><param><value><array><data/></array></value></param><param><value><array><data/></array></value></param><param><value><array><data/></array></value></param><param><value><struct/></value></param><param><value><array><data/></array></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '4627'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.11.2
+      Date:
+      - Thu, 22 Dec 2016 11:23:30 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '212'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="ISO-8859-1"?><methodResponse><params><param><value><array><data><value><string>40</string></value><value><int>1</int></value></data></array></value></param></params></methodResponse>
+    http_version: 
+  recorded_at: Thu, 22 Dec 2016 11:23:30 GMT
+- request:
+    method: post
+    uri: http://<KLARNA_HOST>:<KLARNA_PORT>/
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>activate</methodName><params><param><value><string>4.2</string></value></param><param><value><string>xmlrpc:inapp:4.2</string></value></param><param><value><i4>10</i4></value></param><param><value><string>Jw304XcC0KTApAygG0OdV+RKc0yC6MUMxIY73qvb+wH3DqexhtSbwd2L9DaPxzpjb8K3AWpZOvU1ZB9HPYj1rA==</string></value></param><param><value><string>40</string></value></param><param><value><struct><member><name>flags</name><value><i4>2</i4></value></member></struct></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - ruby/xmlrpc
+      Content-Type:
+      - text/xml;charset=utf-8
+      Content-Length:
+      - '543'
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - deflate,gzclient_ip
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.11.2
+      Date:
+      - Thu, 22 Dec 2016 11:23:30 GMT
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Content-Length:
+      - '233'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="ISO-8859-1"?><methodResponse><params><param><value><array><data><value><string>ok</string></value><value><string>1015975040999967</string></value></data></array></value></param></params></methodResponse>
+    http_version: 
+  recorded_at: Thu, 22 Dec 2016 11:23:30 GMT
+recorded_with: VCR 3.0.3

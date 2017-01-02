@@ -1,3 +1,3 @@
 #!/usr/bin/env zsh
 
-post-review --guess-description --server="https://reviewboard.internal.machines" --tracking-branch=origin/develop --target-group=ponzi_developers -p $*
+post-review --guess-description --server="https://reviewboard.internal.machines" --tracking-branch=origin/develop --target-group=slot -p $*

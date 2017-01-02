@@ -12,7 +12,7 @@ describe Klarna::Methods::GetAddresses do
     let(:store_id)     { ENV['KLARNA_STORE_ID'] }
     let(:store_secret) { ENV['KLARNA_STORE_SECRET'] }
     let(:api_version)  { Klarna::Client::KLARNA_API_VERSION }
-    let(:client_name)  { Klarna::Client::CLIENT_NAME }
+    let(:client_name)  { ENV['CLIENT_NAME'] }
 
     let(:method_params) do
       subject.xmlrpc_params(store_id, store_secret, api_version, client_name, params)
@@ -22,8 +22,8 @@ describe Klarna::Methods::GetAddresses do
       let(:params) do
         {
           :pno          => '410321-9202',
-          :pno_encoding => 2,
-          :type         => 5
+          :pno_encoding => Klarna::Constants::GET_ADDRESSES_PNO_ENCODING_SE,
+          :type         => Klarna::Constants::GET_ADDRESSES_TYPE_PNO
         }
       end
 
@@ -60,8 +60,8 @@ describe Klarna::Methods::GetAddresses do
       let(:params) do
         {
           :tno          => '46704455668',
-          :pno_encoding => 2,
-          :type         => 6
+          :pno_encoding => Klarna::Constants::GET_ADDRESSES_PNO_ENCODING_SE,
+          :type         => Klarna::Constants::GET_ADDRESSES_TYPE_TNO
         }
       end
 
