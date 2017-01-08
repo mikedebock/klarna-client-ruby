@@ -25,7 +25,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency "faraday_middleware"
   gem.add_runtime_dependency "gene_pool"
-  gem.add_runtime_dependency "klarna_correlation_id"
+  # gem.add_runtime_dependency "klarna_correlation_id"
   gem.add_runtime_dependency "retryable", '>= 2.0.0'
 
   gem.files         = `git ls-files`.split($/)

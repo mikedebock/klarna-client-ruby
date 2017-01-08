@@ -14,7 +14,7 @@ require 'klarna/methods/extend_invoice_due_date'
 
 module Klarna
   class Client
-    KLARNA_API_VERSION = '4.2'
+    KLARNA_API_VERSION = '4.1'
 
     def initialize(options = {})
       @hostname     = options[:hostname]     || Klarna.configuration.hostname

@@ -1,5 +1,5 @@
 require 'faraday_middleware'
-require 'klarna_correlation_id'
+#require 'klarna_correlation_id'
 
 module Klarna
   class StatusConnection
